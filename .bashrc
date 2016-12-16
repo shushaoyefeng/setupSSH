@@ -1,0 +1,6 @@
+
+export ~/.aliases
+source ~/.aliases
+
+
+

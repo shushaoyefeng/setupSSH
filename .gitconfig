@@ -1,0 +1,37 @@
+[color]
+	ui = true
+	diff = auto
+	status = auto
+	branch = auto
+	log = auto
+[user]
+	name = chenxueyuan
+	email = chenxueyuan@smartdevices.com.cn
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	pu = push
+	fe = fetch
+	re = rebase
+	logs = log --stat
+	wc = whatchanged
+	sb = show-branch
+	remaster = rebase origin/master
+	pumaster = push origin HEAD:refs/for/master
+	pudev	= push origin HEAD:refs/for/dev
+	pufat	= push origin HEAD:refs/for/devbodyfat
+	puble5  = push origin HEAD:refs/for/devblelib5.0
+	punet = push origin HEAD:refs/for/devnet
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+[core]
+	excludesfile = /Users/JackieChen/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[merge]
+	tool = vimdiff
